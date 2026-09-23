@@ -139,10 +139,10 @@
   <h2>Title &amp; Abstract</h2>
   <div class="abstract">
     <p><strong>Question:</strong> Across thousands of indexed content pages, which ones are underperforming the click‑through rate a page in their position should get, and what should a reviewer check first?
-    <strong>Method:</strong> A Random Forest regressor was trained on March 2026 search performance data and benchmarked against a simple position‑band baseline, then validated two independent ways — a client‑grouped split and a time‑aware February‑to‑March split — to rule out memorization and staleness effects.
-    <strong>Result:</strong> under the strictest, leakage‑safe test (client‑grouped split), the Random Forest did not clearly beat a simple position‑band baseline (MAE 0.00268 vs. 0.00250); it did outperform the baseline under a time‑aware Feb→March split (MAE 0.00243) with no generalization gap across time (0.00243 in both directions).
-    <strong>Application:</strong> applied to 99,197 eligible pages, the model flagged 58,484 (59.0%) for review, each routed to one of three specific actions based on its search position.
-    <strong>Framing:</strong> every finding here is decision‑support, not causal — a page being flagged means it's worth a look, not that any single fix will close the gap.</p>
+    <strong>Data:</strong> 99,197 eligible content items from a single month (March 2026) of FlyRank's internship‑warehouse search performance release, after excluding low‑impression items and the platform's held‑out test table.
+    <strong>Method:</strong> a Random Forest regressor was trained on that data and benchmarked against a simple position‑band baseline, then validated two independent ways — a client‑grouped split and a time‑aware February‑to‑March split — to rule out memorization and staleness effects.
+    <strong>Result:</strong> under the strictest, leakage‑safe test (client‑grouped split), the Random Forest did not clearly beat the baseline (MAE 0.00268 vs. 0.00250); it did outperform under a time‑aware split (0.00243) with no generalization gap across time.
+    <strong>What it's for:</strong> applied to the full eligible set, the model still produces a usable, ranked review queue — 58,484 pages (59.0%) flagged, each routed to one of three specific actions — where its value is the structure and prioritization it adds, not a proven accuracy edge over the baseline; every finding here is decision‑support, not causal.</p>
   </div>
 </section>
 
